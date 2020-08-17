@@ -17,8 +17,10 @@ console.log(simpleArraySum([1,2,3,4,10,11]))
 // return [alicePoints, bobPoints]
 
 function compareTriplets(a, b) {
+
     let count1 = 0
     let count2 = 0
+
    for(let i = 0; i < a.length; i++)
    {
        if(a[i] > b[i])
@@ -30,8 +32,19 @@ function compareTriplets(a, b) {
            count2 += 1
        }
    }
+
    return [count1,count2]
 }
 
 
 console.log(compareTriplets([17,28,30],[99,16,8]))
+
+// return the sum of all elements in an array
+function aVeryBigSum(ar) {
+    return ar.reduce((acc,val) => {
+        return acc + val
+    })
+
+}
+
+console.log(aVeryBigSum([5,1000000001 , 1000000002 ,1000000003 ,1000000004, 1000000005]))
