@@ -48,3 +48,29 @@ function aVeryBigSum(ar) {
 }
 
 console.log(aVeryBigSum([5,1000000001 , 1000000002 ,1000000003 ,1000000004, 1000000005]))
+
+// return the proportion of pos,neg, and zeros in an array with a percision 6 decimal places. 
+function plusMinus(arr) {
+    let pos = 0
+    let neg = 0
+    let zero = 0
+    
+    for(let i = 0; i < arr.length; i++)
+    {
+      if(arr[i] > 0)
+      {
+        pos += 1
+      }
+      if(arr[i] < 0)
+      {
+        neg += 1
+      }
+      if(arr[i] === 0){
+        zero += 1
+      }
+    
+    }
+    return (pos/arr.length).toFixed(6) + '\n' + (neg/arr.length).toFixed(6) + '\n' + (zero/arr.length).toFixed(6)
+    }
+
+    console.log(plusMinus([-4,3,-9,0,4,1]))
