@@ -90,4 +90,23 @@ function miniMaxSum(arr) {
     
     console.log( `${sum - large} ${sum - smallest}`)
     }
+
+// alternative with a helper function
+
+    function miniMaxSum(arr) {
+
+        let sortedArray = arr.sort();
+
+        let minSum, maxSum;
+
+        let addAllNumbers = function (total, num) { 
+            return total + num;
+        }
+
+        maxSum = sortedArray.slice(1).reduce(addAllNumbers);
+        minSum = sortedArray.slice(0, 4).reduce(addAllNumbers);
+        
+        console.log(minSum+ " " +maxSum);
+    
+    }
     
