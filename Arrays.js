@@ -74,3 +74,20 @@ function plusMinus(arr) {
     }
 
     console.log(plusMinus([-4,3,-9,0,4,1]))
+
+
+// Find the minimum and maximum sum of Array
+// arr = [1,3,5,7,9]
+// Ex: The minimum sum is 1 + 3 + 5+ 7 = 16 and the maximum sum is 3 + 5 + 7 + 9 = 24 
+function miniMaxSum(arr) {
+
+    let large = Math.max(...arr)
+    let smallest = Math.min(...arr)
+    
+    let sum = arr.reduce((acc,val) => {
+      return acc + val
+    })
+    
+    console.log( `${sum - large} ${sum - smallest}`)
+    }
+    
