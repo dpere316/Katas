@@ -180,26 +180,67 @@ var intersection = function (nums1, nums2) {
 // 62 + 82 = 100
 // 12 + 02 + 02 = 1
 
-var isHappy = function (n) {
-  let happy = false;
+var isHappy = function(n) {
 
-  while (n !== 1) {
-    let nums = n
-      .toString()
-      .split("")
-      .map((num) => {
-        let total = Math.pow(Number(num), 2);
-        return total;
-      });
 
-    n = nums.reduce((acc, val) => {
-      return acc + val;
-    });
-    console.log(n);
-
-    happy = true;
+  while(n !== 1)
+  {
+   
+   let nums = n.toString().split('').map(num => {
+       let total = Math.pow(Number(num), 2)
+       return total
+     })
+  
+      n = nums.reduce((acc,val) => {
+       return acc + val
+  
+     })
+      
+     if( n < 10 && n != 1 && n !=7)
+          {
+              return false;
+          }
   }
-  return happy;
-};
+  
+   return true
+  
+  };
 
 console.log(isHappy(19));
+
+
+var isValid = function(s) {
+  
+  let map = new Map([['(',')'],['{','}'],['[',']']]);
+  let b=[];
+
+for(let i=0;i<s.length;i++){
+   if(map.has(s.charAt(i))){
+       b.push(s.charAt(i));
+   }
+   else{
+       let pop=b.pop();
+       if(map.get(pop)!==s.charAt(i)){
+           return false;
+       }
+   }
+}
+return b.length===0;
+  
+};;
+
+console.log(isValid('(])'))
+
+// Finish the solution so that it sorts the passed in array of numbers. If the function passes in an empty array or null/nil value then it should return an empty array.
+
+function solution(nums){
+
+  if(nums === null)
+  {
+    return []
+  }
+  return nums.sort(function(a, b){return a - b})
+  
+ }
+
+ console.log(solution([5,2,8,1,9]))
