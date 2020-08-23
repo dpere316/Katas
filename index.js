@@ -21,3 +21,52 @@ function hello(name){
   function greet(name){
     return `Hello, ${name} how are you doing today?`
   }
+
+// Given two strings, write a method to decide if one is a permutation of the other
+
+  function permutationString(str1,str2)
+{
+  if(str1.length !== str2.length)
+  {
+    return false
+  }
+  else
+  {
+    let count = 0
+    let arr1 = str1.split('').sort()
+    let arr2 = str2.split('').sort()
+
+    for(let i = 0; i < str1.length; i++)
+    {
+      if(arr1[i] === arr2[i])
+      {
+        count++
+        
+      }
+    }
+
+    if(count === str1.length)
+    {
+      return true
+    }
+  }
+  return false
+
+}
+
+function permutationString(str1,str2)
+{
+   if(str1.length !== str2.length)
+  {
+    return false
+  }
+  else{
+    
+    let arr1 = str1.split('').sort().toString()
+    let arr2 = str2.split('').sort().toString()
+    return arr1.includes(arr2)
+
+  }
+}
+
+console.log(permutationString('god', 'dos'))
