@@ -244,3 +244,5 @@ function solution(nums){
  }
 
  console.log(solution([5,2,8,1,9]))
+
+ 

@@ -70,3 +70,41 @@ function permutationString(str1,str2)
 }
 
 console.log(permutationString('god', 'dos'))
+
+
+// Implement an algorithm to determine if a string has all unique characters.
+
+function unique(str)
+{
+  let count = 0
+
+  let arr1 = str.split('').sort()
+
+  console.log(arr1)
+
+  for(let i = 0; i < arr1.length; i++)
+  {
+   if(arr1[i] !== arr1[i+1])
+   {
+    count++
+   } 
+   
+  }
+  return true ? count === arr1.length : false
+ 
+}
+
+function unique(str)
+{
+  let set1 = new Set(str)
+
+  if(set1.size !== str.length)
+  {
+    return false
+  }
+  return true
+  
+}
+
+
+console.log(unique('abcd10jk'))
