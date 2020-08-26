@@ -108,3 +108,32 @@ function unique(str)
 
 
 console.log(unique('abcd10jk'))
+
+// First, print each vowel in S on a new line. The English vowels are a, e, i, o, and u, and each vowel must be printed in the same order as it appeared in S .
+// Second, print each consonant (i.e., non-vowel) in  on a new line in the same order as it appeared in S.
+
+function vowelsAndConsonants(s) {
+
+  var newArr = new Array();
+
+  for(var i = 0;i < s.length; i++){
+
+      var char = s.charAt(i);
+
+      if (char =='a' || char =='e'||char =='i'||char =='o'||char =='u')
+      {
+          console.log(char);
+      }
+      else{
+          
+          newArr.push(char);
+      } 
+  }
+
+  for(var i = 0;i < newArr.length; i++)
+  {
+    console.log(newArr[i]);
+  }
+}
+
+console.log(vowelsAndConsonants('javascriptloops'))
