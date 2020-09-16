@@ -254,21 +254,36 @@ function multiples(num1, num2)
 {
 
   let arr = new Array(1000);
+
   let total = 0;
+
   for(let i = 0; i < arr.length -1; i++)
   {
     arr[i] = i + 1;
 
     if(arr[i] % num1 !== 0 && arr[i] % num2 !== 0)
+
     {
       let v  = 0;
       arr[i] = v;
-      
     }
+
     total += arr[i]
   }
+
   console.log(total)
   console.log(arr)
+
 }
 
 console.log(multiples(3,5))
+
+
+function highAndLow(numbers){
+  let num = numbers.split(' ').map(Number)
+  let max = Math.max(...num)
+  let min = Math.min(...num)
+  return `${max} ${min}`
+}
+
+console.log(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'))
