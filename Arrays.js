@@ -287,3 +287,20 @@ function highAndLow(numbers){
 }
 
 console.log(highAndLow('4 5 29 54 4 0 -214 542 -64 1 -3 6 -6'))
+
+
+function christmasTree(height) {
+  let baseLen = 2 * height - 1;
+  let tree = “”;
+  let starLen;
+  let space;
+  for (let i = 1; i <= height; i++) {
+    starLen = i * 2 - 1;
+    space = baseLen - starLen;
+    tree += ” “.repeat(space / 2) + “*”.repeat(starLen) + ” “.repeat(space / 2);
+    if (i != height) {
+      tree += “\n”;
+    }
+  }
+  return tree;
+}
