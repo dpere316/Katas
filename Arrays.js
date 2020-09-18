@@ -304,3 +304,19 @@ function christmasTree(height) {
   }
   return tree;
 }
+
+function solution(digits)
+{
+  let res = 0;
+  for (let i=0; i<digits.length; i++)
+  {
+    let num = digits.substr(i, 5);
+    if(Number(num) > res)
+    {
+      res = Number(num);
+    }
+
+  }
+  return res
+  
+}
