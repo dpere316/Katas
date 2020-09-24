@@ -145,3 +145,18 @@ function roundToNext5(n){
   }
   return n
 }
+
+function maxDiff(list) {
+  
+  let smallest = Math.min(...list);
+  let largest = Math.max(...list); 
+  
+  if(list.length != 0)
+    {
+      return largest - smallest;
+    }
+  else{
+    return 0
+  }
+  
+};
