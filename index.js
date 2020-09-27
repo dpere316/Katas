@@ -160,3 +160,16 @@ function maxDiff(list) {
   }
   
 };
+
+function reject(array, predicate) {
+
+  return array.reduce((acc, val) => {
+  
+  if (!predicate(val)) 
+  {
+    acc.push(val)
+  }
+  return acc
+}, [])
+
+}
