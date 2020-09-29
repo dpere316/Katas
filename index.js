@@ -185,3 +185,19 @@ function tripleTrouble(one, two, three){
   
   return str
  }
+
+ function reverseNumber(n) {
+
+  let revNum = n.toString();
+
+  if(n >= 0)
+  {
+    return Number(revNum.split('').reverse().join(''))
+  }
+  if(n <=0)
+  {
+    let firstChar = revNum.slice(0,1)
+    return revNum = Number(firstChar + revNum.split('').slice(1).reverse().join(''))
+    
+  }
+}
