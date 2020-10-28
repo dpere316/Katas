@@ -50,7 +50,7 @@ fibList = (n) => {
 console.log(fibList(3))
 
  factorial = (n) => {
-     
+
     let result = 1;
     for(let i = 1; i <= n; i++)
     {
@@ -60,4 +60,41 @@ console.log(fibList(3))
     return result;
 };
 
+factorial = function(n) {
+    if(n === 0){
+        return 1;
+    }
+        return factorial(n-1) * n;
+    };
+
 console.log(factorial(1))
+
+function partsSums(ls) {
+
+    let res = new Array(ls.length + 1);
+    res[ls.length] = 0;
+    
+    for (let i = ls.length - 1; i >= 0; i--) 
+      res[i] = res[i + 1] + ls[i];
+    
+    return res;
+    
+  }
+
+  function partsSums(ls) {
+    let r = [0];
+    for(let i in ls.reverse()){
+     r.push(ls[i]+r[i]);
+    }
+    return r.reverse();
+}
+
+function partsSums(ls) {
+    const res = []
+    let sum = ls.reduce((acc,cur) => acc+cur, 0)
+    for(let i=0; i<=ls.length; i++){
+      res.push(sum)
+      sum -= ls[i]
+    }
+    return res
+  }
