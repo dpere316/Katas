@@ -1,9 +1,12 @@
+printTriangle = () => {
+  
+  let string = ""
+  for(let i = 0; i < 7 ; i++)
+  {
+    string = string + "#"
+    console.log(string)
+  }
 
-let string = ""
-for(let i = 0; i < 7 ; i++)
-{
-  string = string + "#"
-  console.log(string)
 }
 
 // Solution 2
