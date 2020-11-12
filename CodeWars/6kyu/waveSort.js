@@ -18,12 +18,16 @@ function waveSort(arr) {
         }
       }
   
-      alt*=-1;
+      alt*=-1; // this causes the loop to only check if curr > next on the even iterations
     }
     return arr;
     
   
   }
+
+
+
+  console.log(waveSort([1, 2, 34, 4, 5, 5, 5, 65, 6, 65, 5454, 4]))
 
 // https://www.codewars.com/kata/596f28fd9be8ebe6ec0000c1/train/javascript
 
