@@ -8,15 +8,31 @@ let count = 1;
   {
   
     let num = nums[i];
+
     // this is a ternary if statement increasing the count
     // if name(number) exists in your object add 1, else add number with value of 1
+    
     obj[num] = obj[num] ? obj[num] + count : 1;
+
+    /*
+         Could also be written like this
+        if (obj[num]) 
+        {
+            obj[num] += count;
+        } 
+        else 
+        {
+            obj[num] = 1;
+        }
+    */
   
   }
-  
+
   return Object.keys(obj).find(key => obj[key] === 1)
   
   };
+
+  console.log(singleNumber([1,1,2,2,4])) // => 4
 
 //   The Object.keys() method is used to return all the keys of the object. On this array of keys, the find() method is used to test if any of these keys match the value provided. The find() method is used to return the value of the first element that satisfies the testing function. If the value matches, then this condition is satisfied and the respective key is returned. This is the key to the value of the object.
 
