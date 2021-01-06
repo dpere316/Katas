@@ -1,3 +1,5 @@
+
+// Solution 1
 var sortedSquares = function(A) {
     
     return A.sort((a,b)=>a+b).map((curr) => {
@@ -5,6 +7,18 @@ var sortedSquares = function(A) {
     })
     
 };
+
+// Solution 2
+
+var sortedSquares = function(nums) {
+    
+    let squares = nums.map((x)=>{
+        return x*x
+    })
+    return squares.sort((a,b)=>a-b)
+};
+
+console.log(sortedSquares([-4,-1,0,3,10]))
 
 // https://leetcode.com/problems/squares-of-a-sorted-array/
 
