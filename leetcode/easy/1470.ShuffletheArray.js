@@ -1,3 +1,5 @@
+// My Solution
+
 var shuffle = function(nums, n) {
     
     let x = nums.slice(0, nums.length - n )
@@ -14,6 +16,18 @@ var shuffle = function(nums, n) {
     return shuffled
       
   };
+
+// Other Solution
+
+  var shuffle = function(nums, n) {
+    let res = [];
+
+    for (i = 0; i < n; i++) {
+        res.push(nums[i],nums[i+n]);
+    }
+    
+    return res;
+};
 
 // https://leetcode.com/problems/shuffle-the-array/
 
