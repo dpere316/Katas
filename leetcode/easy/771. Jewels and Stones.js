@@ -37,3 +37,7 @@ var numJewelsInStones = function(jewels, stones) {
 // Output: 3
 
 
+const numJewelsInStones = (J, S) =>
+{ 
+  return S.split("").filter( a => J.includes(a)).length
+}
