@@ -1,4 +1,5 @@
 var interpret = function (command) {
+  
   let G = /G/g;
   let O = /\(\)/g;
   let AL = /\(al\)/g;
