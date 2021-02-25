@@ -1,6 +1,7 @@
 function toCamelCase(str){
 
-    let regex = /\-|\_/g
+    let regex = /\-|\_/g;
+    
     let arr = str.split(regex)
     
     for(let i = 1; i <arr.length; i++)
